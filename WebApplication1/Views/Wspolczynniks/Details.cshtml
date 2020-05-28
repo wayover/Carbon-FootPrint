@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.Wspolczynnik
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Wspolczynnik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Wspolczynnik_Nazwa.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wspolczynnik_Nazwa.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zrodlo.Doi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zrodlo.Doi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wartosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wartosc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Niepewnosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Niepewnosc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,66 @@
+﻿@model WebApplication1.Models.Nośnik_energii
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nośnik_energii</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Jednostka.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jednostka.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa_Nośnika.Nosnik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa_Nośnika.Nosnik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EqivCO2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EqivCO2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NCV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NCV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

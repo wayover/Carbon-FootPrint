@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Models.Nazwa_nośnika
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nazwa_nośnika</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nosnik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nosnik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kod_GUS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kod_GUS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

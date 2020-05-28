@@ -1,0 +1,56 @@
+﻿@model WebApplication1.Models.Wspolczynnik
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Wspolczynnik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Wspolczynnik_Nazwa.Nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wspolczynnik_Nazwa.Nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zrodlo.Doi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zrodlo.Doi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wartosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wartosc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Niepewnosc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Niepewnosc)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

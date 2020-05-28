@@ -1,0 +1,63 @@
+﻿@model IEnumerable<WebApplication1.Models.Nośnik_energii>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Jednostka.Nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwa_Nośnika.Nosnik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EqivCO2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NCV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Jednostka.Nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwa_Nośnika.Nosnik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EqivCO2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NCV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
